@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+body{
+    /* 폰트설정 */
+
+.container{
+    width: 1060px;
+    height: 100%;
+    margin:0 auto;
+    background:blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: rgb(111, 200, 228);
+}
+
+header .banner{
+    height: 55px;
+    background:purple;
+}
+
+#header_top {
+    height: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+#header_top .left{width: 165px;
+height: 30px;
+background-color: aqua;}
+
+#header_top .right{
+    width:280px;
+    height:30px;
+    background-color: aqua;
+}
+
+#header_main {
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    background-color: pink;
+}
+
+.logo{
+width: 170px;
+height: 40px;
+background-color: tomato;
+}
+
+.logo img {
+    width: 100%;
+}
+
+#header_main #search{
+    width: 600px;
+    height: 80%;background-color: aqua;
+}
+
+#header_main .slidebanner{
+    width: 220px;height: 95px;
+    background-color: tomato;
+}
+
+#header_bottom {
+    height: 50px;
+    border-top: 1px solid #ddd;
+}
+
+#header_bottom .left{
+width: 590px;
+height: 90%;
+background-color: pink;
+}
+
+#header_bottom .right{
+width: 240px;height: 90%;
+background-color: pink;
+}
+
+footer {
+    width: 100%;
+    height: 210px;
+    background-color: #979393;
+}
+
+footer .container{
+    display: block;
+}
+
+footer .top{
+    width: 100%;
+    height: 60%;
+    background-color: orange;display: flex;justify-content: space-between;
+}
+
+
+.customer_center{
+    width: 320px;
+    background-color: aqua;
+}
+
+.customer_center p
+{font-size: 12px;}
+
+footer nav{
+    width: 600px;background-color: pink;
+    display: flex;justify-content: space-between;
+}
+
+
+footer nav ul{
+    width: 23%;background: plum;
+}
+
+
+footer .bottom{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    background-color: greenyellow;
+}
+
+
+footer .bottom .policy_link{
+    width: 70%;background-color: rgb(119, 69, 18);
+}
+
+footer .bottom .icon{
+    width: 100px;
+    background-color: rgb(99, 99, 3);
+}
