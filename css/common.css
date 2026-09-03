@@ -1,17 +1,17 @@
 @charset "utf-8";
 
-body{
+body {
     /* 폰트설정 */
 
-.container{
-    width: 1060px;
-    height: 100%;
-    margin:0 auto;
-    background:blue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .container {
+        width: 1060px;
+        height: 100%;
+        margin: 0 auto;
+        background: gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 header {
@@ -20,9 +20,9 @@ header {
     background-color: rgb(111, 200, 228);
 }
 
-header .banner{
+header .banner {
     height: 55px;
-    background:purple;
+    background: purple;
 }
 
 #header_top {
@@ -30,15 +30,36 @@ header .banner{
     border-bottom: 1px solid #ddd;
 }
 
-#header_top .left{width: 165px;
-height: 30px;
-background-color: aqua;}
-
-#header_top .right{
-    width:280px;
-    height:30px;
+#header_top .left {
+    width: 165px;
+    height: 30px;
     background-color: aqua;
 }
+
+#header_top .right {
+    width: 260px;
+    height: 30px;
+    background-color: aqua;
+}
+
+#header_top li{
+    float: left;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* #header_top .left {
+    width: 590px;
+    height: 90%;
+    background-color: pink;
+}
+
+#header_top .right {
+    width: 240px;
+    height: 90%;
+    background-color: pink;
+} */
+
 
 #header_main {
     width: 100%;
@@ -47,23 +68,25 @@ background-color: aqua;}
     background-color: pink;
 }
 
-.logo{
-width: 170px;
-height: 40px;
-background-color: tomato;
+.logo {
+    width: 170px;
+    height: 40px;
+    background-color: tomato;
 }
 
 .logo img {
     width: 100%;
 }
 
-#header_main #search{
+#header_main #search {
     width: 600px;
-    height: 80%;background-color: aqua;
+    height: 80%;
+    background-color: aqua;
 }
 
-#header_main .slidebanner{
-    width: 220px;height: 95px;
+#header_main .slidebanner {
+    width: 220px;
+    height: 95px;
     background-color: tomato;
 }
 
@@ -72,67 +95,107 @@ background-color: tomato;
     border-top: 1px solid #ddd;
 }
 
-#header_bottom .left{
-width: 590px;
-height: 90%;
-background-color: pink;
+#header_bottom li{
+    float: left;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-#header_bottom .right{
-width: 240px;height: 90%;
-background-color: pink;
+#header_bottom li:nth-of-type(6) a,
+#header_bottom li:nth-of-type(7) a{
+    color: red;
 }
 
 footer {
     width: 100%;
-    height: 210px;
+    height: 460px;
     background-color: #979393;
 }
 
-footer .container{
+footer .container {
     display: block;
+    padding-top: 40px;
 }
 
-footer .top{
+footer .top {
     width: 100%;
     height: 60%;
-    background-color: orange;display: flex;justify-content: space-between;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
 }
 
 
-.customer_center{
+.customer_center {
     width: 320px;
     background-color: aqua;
 }
 
-.customer_center p
-{font-size: 12px;}
+.customer_center p {
+    font-size: 12px;
+}
 
-footer nav{
-    width: 600px;background-color: pink;
-    display: flex;justify-content: space-between;
+footer nav {
+    width: 600px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
 }
 
 
-footer nav ul{
-    width: 23%;background: plum;
+footer nav ul {
+    width: 23%;
+    background: plum;
+}
+
+.sitemap2 li:nth-of-type(4) a {
+    color: red;
 }
 
 
-footer .bottom{
+footer .bottom {
     width: 100%;
     height: 40%;
     display: flex;
     justify-content: space-between;
-    background-color: greenyellow;
+    background-color: #f4f5f3;
 }
 
 
-footer .bottom .policy_link{
-    width: 70%;background-color: rgb(119, 69, 18);
+footer .bottom .policy_link {
+    width: 70%;
+    background-color: rgb(119, 69, 18);
 }
 
-footer .bottom .icon{
+footer .bottom .policy_link ul {
+    overflow: hidden;
+}
+
+footer .bottom .policy_link li {
+    float: left;
+    padding: 0 15px;
+}
+
+footer .bottom .policy_link li::after {
+    content: "|";
+    float: right;
+    margin-right: -15px;
+}
+
+footer .bottom .policy_link li:last-child::after {
+    content: "";
+}
+
+footer .bottom .policy_link .footer-info {
+    margin: 15px 0;
+}
+
+footer .bottom .policy_link p {
+    padding: 0 15px;
+}
+
+footer .bottom .icon {
     width: 100px;
     background-color: rgb(99, 99, 3);
 }
