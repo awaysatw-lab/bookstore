@@ -1,19 +1,58 @@
 @charset "utf-8";
 
 #top_banner {
+    position: relative;
     width: 100%;
     height: 65px;
-    display: flex;
 }
 
-#top_banner .left{
+/* 배경 50:50 분할 */
+#top_banner .bg_wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#top_banner .bg_wrap .left {
     width: 50%;
     height: 100%;
     background-color: skyblue;
 }
 
-#top_banner .right {
+#top_banner .bg_wrap .right {
     width: 50%;
     height: 100%;
     background-color: darkgreen;
 }
+
+/* 실제 콘텐츠 중앙 정렬 (기존 헤더의 .container와 너비 통일) */
+#top_banner .container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 1200px; /* 프로젝트의 기준 너비에 맞게 수정 */
+    height: 100%;
+}
+
+#top_banner .left_content,
+#top_banner .right_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+#top_banner .right_content {
+    position: relative; /* 닫기 버튼 배치를 위한 기준점 */
+}
+
+#top_banner .close_btn {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
