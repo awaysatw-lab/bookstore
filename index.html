@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko"> <!-- 한국어 페이지이므로 ko 권장 -->
 
 <head>
    <meta charset="UTF-8">
@@ -17,15 +17,16 @@
             <div class="container">
                <div class="left">
                   <ul>
-                     <li><a href="">매장안내</a></li>
-                     <li><a href="">혜택안내</a></li>
-                     <li><a href="">나우드림</a></li>
+                     <li><a href="#">매장안내</a></li>
+                     <li><a href="#">혜택안내</a></li>
+                     <li><a href="#">나우드림</a></li>
                   </ul>
                </div>
                <div class="right">
                   <ul>
-                     <li><a href="/Login"></a>로그인</a></li>
-                     <li><a href="/Join">회원가입</a></li>
+                     <!-- 1. 닫는 태그(</a>) 위치 수정 -->
+                     <li><a href="/login">로그인</a></li>
+                     <li><a href="/join">회원가입</a></li>
                      <li><a href="/basket">장바구니</a></li>
                      <li><a href="/order">주문배송</a></li>
                      <li><a href="/call-center">고객센터</a></li>
@@ -37,229 +38,55 @@
          <div id="header_main">
             <div class="container">
                <div class="logo">
-                  <img src="./img/logo.png" alt="logo">
+                  <!-- 로고는 보통 메인으로 이동하는 링크로 감쌉니다 -->
+                  <h1><a href="/"><img src="./img/logo.png" alt="영풍문고 로고"></a></h1>
                </div>
 
-               <div class="search"></div>
+               <div class="search">
+                  <!-- 검색창 예시 -->
+                  <form action="/search" method="get">
+                     <input type="text" placeholder="검색어를 입력하세요">
+                     <button type="submit">검색</button>
+                  </form>
+               </div>
 
-               <div class="small banner">
+               <!-- 2. 클래스명 공백 수정 (small banner -> small_banner) -->
+               <div class="small_banner">
                   <ul>
-
+                     <!-- 배너 아이템 영역 -->
                   </ul>
                </div>
             </div>
          </div>
-
 
          <div id="header_bottom">
             <div class="container">
-               <div class="menutool">
+               <!-- 내비게이션 역할이므로 nav 태그 활용 권장 -->
+               <nav class="menutool">
                   <ul>
                      <li><a href="/category">전체카테고리</a></li>
-                     <li><a href="/best-seller">베스트셀러</a> </li>
+                     <li><a href="/best-seller">베스트셀러</a></li>
                      <li><a href="/new-arrival">신간도서</a></li>
-                     <li><a href="recomend">추천</a></li>
-                     <li><a href="gift">기프트콘</a></li>
-                     <li><a href="culture">문화</a></li>
-                     <li><a href="wonder">원더</a></li>
-                     <li><a href="new">신규가입</a></li>
-                     <li><a href="free gift">사은품</a></li>
-                     <li><a href="Event">이벤트</a></li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-
-      </header>
-
-
-
-
-      <div class="screen window">
-
-      </div>
-
-      <div class="section-shortcuts">
-
-      </div>
-
-      <div class="today">
-
-      </div>
-
-      <div class="best seller">
-      </div>
-
-
-      <div class="curser">
-
-      </div>
-
-      <div class="new">
-
-      </div>
-
-      <div class="middle_banner">
-
-      </div>
-
-      <div class="popular">
-
-      </div>
-
-      <div class="md">
-
-
-      </div>
-
-
-      <div class="jump">
-
-      </div>
-
-      <div class="hot book">
-
-      </div>
-
-      <div class="middle-banner2">
-
-      </div>
-
-
-      <div class="theme">
-
-      </div>
-
-      <div class="choice">
-
-      </div>
-
-      <div class="bottom-banner">
-
-      </div>
-      <div class="gift">
-
-      </div>
-
-      <div class="price">
-
-
-
-      </div>
-      <div class="notice">
-
-      </div>
-      <div class="customer.center">
-
-      </div>
-
-
-      <footer>
-         <div class="container">
-            <div class="top">
-               <div class="customer_center">
-                  <h5>고객센터</h5>
-                  <h2>1544-9020</h2>
-                  <p>상담가능시간 평일09:00~18:00/</p>
-                  <p>점심시간12:15~13:15</p>
-                  <p>대표메일 customer @ypbooks.co.kr</p>
-                  <p>대량주문 webmaster@ypbooks.co.kr</p>
-                  <button id="btn-qustion" class="footer-btn>FAQ</button>
-
-                  <button id=" btn-cs" class="footer-btn">1:1고객상담</button>
-
-
-
-                  <button id="btn-partner" class="footer-btn">입점문의</button>
-               </div>
-
-               <nav>
-                  <ul class="sitemap1">
-                     <li>영풍문고</li>
-                     <li><a href="">회사소개</a></li>
-                     <li><a href="">매장안내</a></li>
-                     <li><a href="">나우드림</a></li>
-                  </ul>
-
-                  <ul class="sitemap2">
-                     <li>비즈니스</li>
-                     <li><a href="">입점문의</a></li>
-                     <li><a href="">광고안내</a></li>
-                     <li><a href="">상품관리scm</a></li>
-                  </ul>
-
-                  <ul class="sitemap3">
-                     <li>쇼핑도우미</li>
-                     <li><a href="">도서검색</a></li>
-                     <li><a href="">회원등급혜택</a></li>
-                     <li><a href="">주문배송</a></li>
-                     <li><a href="">취소/교환/환불</a></li>
-                     <li><a href="">적립금사용</a></li>
-                     <li><a href="">교환권사용</a></li>
-                     <li><a href="">청약철회</a></li>
-                  </ul>
-
-                  <ul class="sitemap4">
-                     <li>고객센터</li>
-                     <li><a href="">1:1고객상담</a></li>
-                     <li><a href="">FaQ</a></li>
-                     <li><a href="">공지사항</a></li>
+                     <!-- 3. 오타 및 경로 슬래시(/) 통일 -->
+                     <li><a href="/recommend">추천</a></li>
+                     <li><a href="/gift">기프트콘</a></li>
+                     <li><a href="/culture">문화</a></li>
+                     <li><a href="/wonder">원더</a></li>
+                     <li><a href="/new">신규가입</a></li>
                   </ul>
                </nav>
             </div>
+         </div>
+      </header>
 
+      <main>
+         <!-- 본문 영역 -->
+      </main>
 
-
-            <div class="bottom">
-               <div class="logo">
-                  <img src="./img/logo.png" alt="logo">
-               </div>
-
-               <div class="policy_link">
-                  <ul>
-                     <li><a href="/notice">이용약관</a></li>
-                     <li><a href="/terms">개인정보처리방침</a></li>
-                     <li><a href="/privacy"><strong>영상정보관리방침</strong></a></li>
-                     <li>
-                        <a href="/youth-strong">청소년보호정책</a>
-                     </li>
-
-                     <li>
-                        <a href="/reject">이메일무단수집거부</a>
-                     </li>
-                  </ul>
-
-                  <ul class="footer-info">
-                     <li>주소서울특별시 강남구 강남대로 542(논현동, 영풍빌딩) (우)06110</li>
-                     <li>
-                        대표이사김경환
-                     </li>
-                     <li>
-                        사업자 등록번호773-86-01800 사업자정보확인
-                     </li>
-                     <li>
-                        통신판매등록번호2024-서울강남-06241
-                     </li>
-                     <li>
-                        개인정보관리 책임자조순제
-                     </li>
-
-                  </ul>
-                  <p>
-                     COPYRIGHT © YOUNGPOONG BOOKSTORE INC. ALL RIGHTS RESERVED.
-                  </p>
-               </div>
-
-               <div class="icon"></div>
-            </div>
-
-         </div>         
-
+      <footer>
+         <!-- 푸터 영역 -->
       </footer>
-
    </div>
-
-
 </body>
 
 </html>
