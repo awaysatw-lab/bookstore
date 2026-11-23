@@ -2,27 +2,66 @@
 
 body {
     /* 폰트설정 */
-
-    .container {
-        width: 1060px;
-        height: 100%;
-        margin: 0 auto;
-        background: gray;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
 }
 
+.container {
+    width: 1060px;
+    height: 100%;
+    margin: 0 auto;
+    background: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ================= 최상단 띠배너 ================= */
+#top_banner {
+    position: relative;
+    width: 100%;
+    height: 65px;
+}
+
+#top_banner .bg_wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#top_banner .bg_wrap .left {
+    width: 50%;
+    height: 100%;
+    background-color: skyblue;
+}
+
+#top_banner .bg_wrap .right {
+    width: 50%;
+    height: 100%;
+    background-color: darkgreen;
+}
+
+#top_banner .container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent; /* 뒷배경색이 보이도록 투명 처리 */
+}
+
+#top_banner .left_content,
+#top_banner .right_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+/* ================= 헤더 ================= */
 header {
     width: 100%;
     height: auto;
     background-color: rgb(111, 200, 228);
-}
-
-header .banner {
-    height: 55px;
-    background: purple;
 }
 
 #header_top {
@@ -31,35 +70,25 @@ header .banner {
 }
 
 #header_top .left {
-    width: 165px;
     height: 30px;
     background-color: aqua;
 }
 
 #header_top .right {
-    width: 260px;
     height: 30px;
     background-color: aqua;
 }
 
-#header_top li{
-    float: left;
+#header_top ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#header_top li {
     padding: 5px;
     font-size: 12px;
 }
-
-/* #header_top .left {
-    width: 590px;
-    height: 90%;
-    background-color: pink;
-}
-
-#header_top .right {
-    width: 240px;
-    height: 90%;
-    background-color: pink;
-} */
-
 
 #header_main {
     width: 100%;
@@ -78,7 +107,7 @@ header .banner {
     width: 100%;
 }
 
-#header_main #search {
+#header_main .search {
     width: 600px;
     height: 80%;
     background-color: aqua;
@@ -95,18 +124,28 @@ header .banner {
     border-top: 1px solid #ddd;
 }
 
-#header_bottom li{
-    float: left;
-    padding: 5px;
+#header_bottom ul {
+    display: flex;
+    align-items: center;
+}
+
+#header_bottom li {
+    padding: 5px 15px 5px 0;
     font-size: 16px;
     font-weight: bold;
 }
 
 #header_bottom li:nth-of-type(6) a,
-#header_bottom li:nth-of-type(7) a{
+#header_bottom li:nth-of-type(7) a {
     color: red;
 }
 
+/* ================= 본문 (임시) ================= */
+main {
+    min-height: 500px;
+}
+
+/* ================= 푸터 ================= */
 footer {
     width: 100%;
     height: 460px;
@@ -116,6 +155,7 @@ footer {
 footer .container {
     display: block;
     padding-top: 40px;
+    box-sizing: border-box; /* 패딩 포함 높이 계산 */
 }
 
 footer .top {
@@ -125,7 +165,6 @@ footer .top {
     display: flex;
     justify-content: space-between;
 }
-
 
 .customer_center {
     width: 320px;
@@ -143,7 +182,6 @@ footer nav {
     justify-content: space-between;
 }
 
-
 footer nav ul {
     width: 23%;
     background: plum;
@@ -153,7 +191,6 @@ footer nav ul {
     color: red;
 }
 
-
 footer .bottom {
     width: 100%;
     height: 40%;
@@ -162,25 +199,30 @@ footer .bottom {
     background-color: #f4f5f3;
 }
 
-
 footer .bottom .policy_link {
     width: 70%;
     background-color: rgb(119, 69, 18);
 }
 
 footer .bottom .policy_link ul {
-    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 footer .bottom .policy_link li {
-    float: left;
+    display: flex;
+    align-items: center;
     padding: 0 15px;
+}
+
+footer .bottom .policy_link li:first-child {
+    padding-left: 0;
 }
 
 footer .bottom .policy_link li::after {
     content: "|";
-    float: right;
-    margin-right: -15px;
+    margin-left: 15px;
+    font-size: 12px;
 }
 
 footer .bottom .policy_link li:last-child::after {
@@ -192,10 +234,11 @@ footer .bottom .policy_link .footer-info {
 }
 
 footer .bottom .policy_link p {
-    padding: 0 15px;
+    font-size: 12px;
 }
 
 footer .bottom .icon {
     width: 100px;
     background-color: rgb(99, 99, 3);
 }
+코드를 사용할 때는 주의가 필요합니다.
