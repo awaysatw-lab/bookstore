@@ -1,92 +1,166 @@
 <!DOCTYPE html>
-<html lang="ko"> <!-- 한국어 페이지이므로 ko 권장 -->
-
+<html lang="ko">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>영풍문고</title>
-
-   <link rel="stylesheet" href="./css/reset.css">
-   <link rel="stylesheet" href="./css/common.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 레이아웃</title>
+    <!-- 작성하신 CSS 파일 연결 -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 브라우저 기본 여백 및 리스트 스타일 초기화 (별도 reset.css 사용 시 생략 가능) */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ul, li { list-style: none; }
+        a { text-decoration: none; color: inherit; }
+    </style>
 </head>
-
 <body>
-   <div id="wrap">
-      <header>
-         <div id="header_top">
-            <div class="container">
-               <div class="left">
-                  <ul>
-                     <li><a href="#">매장안내</a></li>
-                     <li><a href="#">혜택안내</a></li>
-                     <li><a href="#">나우드림</a></li>
-                  </ul>
-               </div>
-               <div class="right">
-                  <ul>
-                     <!-- 1. 닫는 태그(</a>) 위치 수정 -->
-                     <li><a href="/login">로그인</a></li>
-                     <li><a href="/join">회원가입</a></li>
-                     <li><a href="/basket">장바구니</a></li>
-                     <li><a href="/order">주문배송</a></li>
-                     <li><a href="/call-center">고객센터</a></li>
-                  </ul>
-               </div>
+
+    <!-- ================= 최상단 띠배너 ================= -->
+    <div id="top_banner">
+        <!-- 배경 50:50 분할 영역 -->
+        <div class="bg_wrap">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <!-- 1060px 중앙 정렬 콘텐츠 -->
+        <div class="container">
+            <div class="left_content">
+                <a href="#">왼쪽 이벤트 배너 문구</a>
             </div>
-         </div>
-
-         <div id="header_main">
-            <div class="container">
-               <div class="logo">
-                  <!-- 로고는 보통 메인으로 이동하는 링크로 감쌉니다 -->
-                  <h1><a href="/"><img src="./img/logo.png" alt="영풍문고 로고"></a></h1>
-               </div>
-
-               <div class="search">
-                  <!-- 검색창 예시 -->
-                  <form action="/search" method="get">
-                     <input type="text" placeholder="검색어를 입력하세요">
-                     <button type="submit">검색</button>
-                  </form>
-               </div>
-
-               <!-- 2. 클래스명 공백 수정 (small banner -> small_banner) -->
-               <div class="small_banner">
-                  <ul>
-                     <!-- 배너 아이템 영역 -->
-                  </ul>
-               </div>
+            <div class="right_content">
+                <a href="#">오른쪽 이벤트 배너 문구</a>
+                <!-- 닫기 버튼 필요 시 주석 해제 후 CSS 추가 -->
+                <!-- <button type="button" class="close_btn">✕</button> -->
             </div>
-         </div>
+        </div>
+    </div>
 
-         <div id="header_bottom">
+    <!-- ================= 헤더 ================= -->
+    <header>
+        <!-- 상단 유틸 메뉴 -->
+        <div id="header_top">
             <div class="container">
-               <!-- 내비게이션 역할이므로 nav 태그 활용 권장 -->
-               <nav class="menutool">
-                  <ul>
-                     <li><a href="/category">전체카테고리</a></li>
-                     <li><a href="/best-seller">베스트셀러</a></li>
-                     <li><a href="/new-arrival">신간도서</a></li>
-                     <!-- 3. 오타 및 경로 슬래시(/) 통일 -->
-                     <li><a href="/recommend">추천</a></li>
-                     <li><a href="/gift">기프트콘</a></li>
-                     <li><a href="/culture">문화</a></li>
-                     <li><a href="/wonder">원더</a></li>
-                     <li><a href="/new">신규가입</a></li>
-                  </ul>
-               </nav>
+                <div class="left">
+                    <ul>
+                        <li><a href="#">즐겨찾기</a></li>
+                        <li><a href="#">입점신청</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
             </div>
-         </div>
-      </header>
+        </div>
 
-      <main>
-         <!-- 본문 영역 -->
-      </main>
+        <!-- 로고 / 검색창 / 슬라이드배너 -->
+        <div id="header_main">
+            <div class="container">
+                <h1 class="logo">
+                    <a href="#"><img src="logo.png" alt="로고"></a>
+                </h1>
+                <div class="search">
+                    <!-- 검색 폼 영역 -->
+                    <form action="#">
+                        <input type="text" placeholder="검색어를 입력하세요">
+                        <button type="submit">검색</button>
+                    </form>
+                </div>
+                <div class="slidebanner">
+                    <!-- 미니 배너 영역 -->
+                    <a href="#">우측 프로모션 배너</a>
+                </div>
+            </div>
+        </div>
 
-      <footer>
-         <!-- 푸터 영역 -->
-      </footer>
-   </div>
+        <!-- 메인 내비게이션 (GNB) -->
+        <nav id="header_bottom">
+            <div class="container">
+                <ul>
+                    <li><a href="#">전체카테고리</a></li>
+                    <li><a href="#">베스트</a></li>
+                    <li><a href="#">신상품</a></li>
+                    <li><a href="#">특가혜택</a></li>
+                    <li><a href="#">기획전</a></li>
+                    <li><a href="#">이벤트</a></li> <!-- nth-of-type(6): red 적용 -->
+                    <li><a href="#">쿠폰존</a></li> <!-- nth-of-type(7): red 적용 -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= 본문 (임시) ================= -->
+    <main>
+        <div class="container">
+            메인 콘텐츠 영역 (높이 500px 이상)
+        </div>
+    </main>
+
+    <!-- ================= 푸터 ================= -->
+    <footer>
+        <div class="container">
+            <!-- 푸터 상단: 고객센터 + 사이트맵 -->
+            <div class="top">
+                <div class="customer_center">
+                    <h3>고객센터 1588-0000</h3>
+                    <p>평일 09:00 ~ 18:00 (주말 및 공휴일 휴무)</p>
+                    <p>점심시간 12:00 ~ 13:00</p>
+                </div>
+
+                <nav>
+                    <ul class="sitemap1">
+                        <li><strong>회사소개</strong></li>
+                        <li><a href="#">브랜드 스토리</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                        <li><a href="#">채용정보</a></li>
+                    </ul>
+                    <ul class="sitemap2">
+                        <li><strong>고객지원</strong></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">1:1 문의하기</a></li> <!-- nth-of-type(4): red 적용 -->
+                    </ul>
+                    <ul class="sitemap3">
+                        <li><strong>쇼핑안내</strong></li>
+                        <li><a href="#">주문/배송 조회</a></li>
+                        <li><a href="#">교환/반품 안내</a></li>
+                        <li><a href="#">멤버십 혜택</a></li>
+                    </ul>
+                    <ul class="sitemap4">
+                        <li><strong>제휴문의</strong></li>
+                        <li><a href="#">입점/제휴 안내</a></li>
+                        <li><a href="#">대량구매 문의</a></li>
+                        <li><a href="#">마케팅 제휴</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- 푸터 하단: 약관 링크 + 회사 정보 + 아이콘 -->
+            <div class="bottom">
+                <div class="policy_link">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="#">청소년보호정책</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                    </ul>
+                    <div class="footer-info">
+                        <p>상호명 : (주)쇼핑몰 | 대표자 : 홍길동 | 사업자등록번호 : 000-00-00000</p>
+                        <p>주소 : 서울특별시 강남구 테헤란로 000 | 통신판매업신고 : 제2026-서울강남-0000호</p>
+                        <p>COPYRIGHT © SHOPPINGMALL. ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <!-- SNS 또는 인증마크 영역 -->
+                    <a href="#">SNS 아이콘</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
-
 </html>
